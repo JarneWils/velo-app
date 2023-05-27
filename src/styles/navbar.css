@@ -1,0 +1,86 @@
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+a:hover{
+    color: var(--green);
+    font-weight: 600;
+}
+.velo-logo{
+    width: 8vh;
+    height: auto;
+}
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--nav-gray);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 21;
+}
+.nav__logo{
+    width: 10vw;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-left: 10vw;
+}
+.logo{
+    height: 6vh;
+}
+.nav__menu{
+    width: 40vw;
+    position: absolute;
+    right: 10vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    align-items: center;
+}
+.nav__item{
+    width: 10vw;
+}
+.nav__toggler div{
+    width: 2.5rem;
+    height: 0.3rem;
+    margin: 0.4rem;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+.nav__toggler{
+     cursor: pointer;
+     display: none;
+}
+
+@media screen and (max-width: 770px) {
+    .nav{
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .nav__toggler{
+        margin-left: 60vw;
+        display: block;
+        z-index: 22;
+    }
+    .nav__menu{
+        position: fixed;
+        top: 0vh;
+        right: 0vw;
+        width: 50%;
+        height: 100vh;
+        padding-top: 10vh;
+        background-color: var(--nav-gray);
+        flex-direction: column;
+        gap: 4vh;
+        transform: translateX(98vh);
+    }
+}
+
+/* nav active class */
+.nav__active{
+    transform: translateX(0%);
+}
