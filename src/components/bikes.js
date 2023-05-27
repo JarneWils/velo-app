@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import '../styles/global.css';
 import '../styles/bikes.css';
 import pinIcon from '../public/pin-icon.png';
